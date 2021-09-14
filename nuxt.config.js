@@ -63,7 +63,7 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: { baseURL: 'http://localhost:8000/api/' },
+  axios: { baseURL: 'https://thawing-waters-77627.herokuapp.com/api/' },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
