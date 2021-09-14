@@ -1,0 +1,33 @@
+@import 'layout/default.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 16px;
+  font-family: 'Mulish', sans-serif !important;
+  scroll-behavior: smooth;
+  color: #102a32;
+}
+
+.button-primary {
+  text-decoration: none;
+  height: 36px;
+  border-radius: 20px;
+  &.v-btn {
+    background: linear-gradient(180deg, #7173fd 0%, #ab69fe 100%);
+  }
+  span {
+    color: white;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
