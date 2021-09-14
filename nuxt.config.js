@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - four-wheel-parking-front',
+    titleTemplate: '%s - Parqueadero cuatro ruedas',
     title: 'four-wheel-parking-front',
     htmlAttrs: {
       lang: 'en',
@@ -14,13 +14,33 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Te brindamos el mejor espacio para tu vehículo',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mulish:wght@0,700;1,400&display=swap',
+      },
+    ],
+  },
+
+  // To import loading component
+  loading: '~/components/General/Loading.vue',
+
+  // Server to specity host and port for server instance
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0', // default: localhost
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -43,7 +63,7 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: { baseURL: 'http://localhost:8000/api/' },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -52,13 +72,13 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: colors.blue.darken2,
+          primary: '#33d1fc',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
+          success: colors.green.darken2,
         },
       },
     },
