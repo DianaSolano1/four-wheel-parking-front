@@ -7,7 +7,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Parqueadero cuatro ruedas',
-    title: 'four-wheel-parking-front',
+    title: 'Parqueadero cuatro ruedas',
     htmlAttrs: {
       lang: 'en',
     },
